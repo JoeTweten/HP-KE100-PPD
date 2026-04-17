@@ -1,11 +1,16 @@
-## HP KE100 Label Printer (ZPL Compatible) – Minimal CUPS PPD
+## HP KE100 Label Printer CUPS PPD (Based on Zebra ZPL2 PPD) 
 
-Minimal CUPS PPD for the HP KE100 label printer using ZPL compatibility. Optimized for reliable 4×6 label printing with:
-- Correct media sizing
-- Zero margins
-- Stable output for shipping and warehouse workflows
+Supports Linux and macOS print servers using CUPS.
 
-Supports Linux and macOS environments using CUPS.
+## CUPS Overview
+
+CUPS (Common UNIX Printing System) is the default printing system for Linux and macOS, using IPP for reliable, network-based printing.
+
+**Benefits:**
+- Cross-platform (Linux & macOS)
+- Driverless / IPP support
+- Reliable print queue management
+- CLI + web interface (http://localhost:631)
 
 ---
 
@@ -129,41 +134,3 @@ lpadmin -p HP_KE100 -E -v usb://HP/KE100 -P /usr/share/ppd/custom/HP_KE100.PPD
 - Scaling: 100% (disable fit-to-page in apps)
 
 ---
-
-## Notes
-
-- Designed for ZPL-compatible label printers
-- Uses rastertolabel filter for consistent output
-- Zero margins ensure full label utilization
-- Works best with shipping platforms (UPS, FedEx, USPS, etc.)
-
----
-
-## File Structure Example
-
-```text
-HP_KE100_PPD/
-└── HP_KE100.PPD
-```
-
----
-
-## Troubleshooting
-
-- **Misaligned prints**  
-  Ensure application scaling is disabled (no “fit to page”)
-
-- **Blank labels**  
-  Verify correct Media Type (Direct vs Thermal)
-
-- **Incorrect size**  
-  Confirm PageSize is set to 4x6 (w288h432)
-
-- **Slow printing**  
-  Use 203 DPI unless higher resolution is required
-
----
-
-## License / Usage
-
-This PPD is provided as-is for compatibility and testing purposes. Adjustments may be required depending on firmware or environment.
