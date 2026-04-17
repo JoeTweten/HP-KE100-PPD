@@ -1,6 +1,6 @@
 ## HP KE100 Label Printer CUPS PPD (Based on Zebra ZPL2 PPD) 
 
-Supports Linux and macOS print servers using CUPS.
+Supports Linux and macOS printing using CUPS.
 
 ## CUPS Overview
 
